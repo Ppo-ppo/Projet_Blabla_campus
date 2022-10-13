@@ -16,8 +16,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script> <!-- link for car icon -->
     <script src="https://kit.fontawesome.com/573723cbf2.js" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" href="assets/style.css">
+    <!-- <script>
+        //if browser support service worker
+        window.addEventListener('load', () =>{
+
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('../assets/sw.js');
+        }
+        });
+      </script> -->
+      <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+      </script>
 </head>
 <body>
     <!-- ----------------------affichage sur ordinateur ------------------------------- -->
